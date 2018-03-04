@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  itemCount: number = 4;
+  itemCount: number = 0;
 
   btnText: string = 'Add an Item';
 
@@ -30,6 +30,11 @@ export class HomeComponent implements OnInit {
     this.goals.push(this.goalText);
     this.goalText = '';
     this.itemCount = this.goals.length;
+  }
+
+  removeItem(i) {
+  	console.log(i);
+    this.goals.splice(i, 1);
   }
 
 }

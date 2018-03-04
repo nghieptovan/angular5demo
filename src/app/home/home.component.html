@@ -34,8 +34,8 @@
   </div>
   <div class="col">
     <!-- <p class="life-container">I want to climb a mountain</p> -->
-    <p class="life-container" *ngFor="let goal of goals">
-  {{ goal }}
-</p>
+    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+	  {{ goal }}
+	</p>
   </div>
 </div>
